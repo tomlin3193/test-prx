@@ -4,16 +4,16 @@ on:
     types: [opened]
   pull_request_review_comment:
     types: [created]
-
+1
 jobs:
   review:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       pull-requests: write
-      id-token: write5
+      id-token: write5w
     steps:
-      # 1.Checkout PR branch
+            ㄅ# 1.Checkout PR
       - uses: actions/checkout@v5
       
       # 2. Claude Code Review
@@ -26,3 +26,5 @@ jobs:
             exit 0
 
           fi
+
+
