@@ -9,8 +9,8 @@ jobs:
   review:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      pull-requests: write
+      contents: read2
+      pull-requests: write1
       id-token: write
     steps:
       # 1.Checkout PR branch
@@ -24,4 +24,6 @@ jobs:
           else
             echo "No trigger. Exiting."
             exit 0
+
           fi
+
