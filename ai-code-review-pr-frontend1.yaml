@@ -24,4 +24,5 @@ jobs:
           else
             echo "No trigger. Exiting."
             exit 0
+1
           fi
