@@ -1,0 +1,27 @@
+name: PR
+on:
+  pull_request:
+    types: [opened]
+  pull_request_review_comment:
+    types: [created]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      id-token: write
+    steps:
+      # 1.Checkout PR branch
+      - uses: actions/checkout@v5
+      
+      # 2. Claude Code Review
+      - name: Check trigger
+        run: |
+          if [[ "${{ github.event_name }}" == "pull_request" || ("${{ github.event_name }}" == "pull_request_review_comment" && "${{ github.event.comment.body }}" == *"/ai-code-review-pr-frontend"*) ]]; then
+            echo "Triggering AI code review."
+          else
+            echo "No trigger. Exiting."
+            exit 0
+          fi
