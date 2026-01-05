@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read3
-      pull-requests: write
+      pull-requests: write3
       id-token: write5
     steps:
       # 1.Checkout PR branch
@@ -26,4 +26,5 @@ jobs:
             exit 0
 
           fi
+
 
