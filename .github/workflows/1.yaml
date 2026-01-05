@@ -1,7 +1,7 @@
 name: PR
 on:
   pull_request:
-    types: [opened]
+    types: [opened,converted_to_draft]
   pull_request_review_comment:
     types: [created]
   issue_comment:
