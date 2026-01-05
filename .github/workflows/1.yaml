@@ -1,11 +1,7 @@
 name: PR
 on:
   pull_request:
-    types: [opened,converted_to_draft]
-  pull_request_review_comment:
-    types: [created]
-  issue_comment:
-    types: [created, deleted]
+    types: [opened,ready_for_review]
 jobs:
   review:
     runs-on: ubuntu-latest
