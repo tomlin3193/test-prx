@@ -9,7 +9,7 @@ jobs:
   review:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: read3
       pull-requests: write
       id-token: write5
     steps:
@@ -26,3 +26,4 @@ jobs:
             exit 0
 
           fi
+
